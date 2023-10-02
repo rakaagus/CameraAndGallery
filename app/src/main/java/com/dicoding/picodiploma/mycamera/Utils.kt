@@ -41,3 +41,8 @@ fun getImageUriPreQ(context: Context): Uri {
         imageFile
     )
 }
+
+fun createCustomTempFile(context: Context): File {
+    val fileDir = context.externalCacheDir
+    return File.createTempFile(timeStamp, ".jpg", fileDir)
+}
